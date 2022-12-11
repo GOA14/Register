@@ -40,7 +40,8 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -64,10 +65,12 @@ select {
     scroll-behavior: auto;
   }
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -164,6 +167,14 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 15px;
   outline-color: #663398;
 }
+.register-page .register-wrapper .register-form form input::-moz-placeholder {
+  font-size: 14px;
+  color: #98949B;
+}
+.register-page .register-wrapper .register-form form input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #98949B;
+}
 .register-page .register-wrapper .register-form form input::placeholder {
   font-size: 14px;
   color: #98949B;
@@ -233,6 +244,4 @@ input[type=text]:focus, input[type=password]:focus {
     bottom: 0;
     right: 0;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styles.css.map */
